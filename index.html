@@ -7,8 +7,6 @@
     <link rel="stylesheet" href="./style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
       rel="stylesheet"
@@ -16,11 +14,11 @@
   </head>
 
   <body>
-    <div id="home" class="main-box">
+    <div id="main" class="main-box">
       <nav>
         <h2 class="portfolio">Portfo<span>lio</span></h2>
         <ul>
-          <li><a href="#home">Home</a></li>
+          <li><a href="#main">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -36,7 +34,7 @@
       </div>
     </div>
     <section id="about">
-      <img src="./assets/me.png" />
+      <img src="./assets/me.png" alt="Luiz Felipe" />
       <div>
         <h2>About Me</h2>
         <p>
@@ -48,7 +46,7 @@
           development using JavaScript, with SQL, noSQL banks and tools such as
           Sequelize, TypeORM, Express, Docker, MongoDB.
         </p>
-        <button>Contact</button>
+        <button onclick="scrollToContact()">Contact</button>
       </div>
     </section>
     <div id="projects" class="projects">
@@ -56,27 +54,21 @@
 
       <div class="cards-project">
         <div class="card">
-          <img src="./assets/carousel.png" alt="image" />
+          <img src="./assets/carousel.png" alt="Project 1" />
           <h5>nome do projeto 1</h5>
-          <p>
-            Description
-          </p>
+          <p>Description</p>
           <a target="_blank">Learn More</a>
         </div>
         <div class="card">
-          <img src="" alt="image" />
+          <img src="./assets/project2.png" alt="Project 2" />
           <h5>nome do projeto 2</h5>
-          <p>
-            Description
-          </p>
+          <p>Description</p>
           <a target="_blank">Learn More</a>
         </div>
         <div class="card">
-          <img src="" alt="image" />
+          <img src="./assets/project3.png" alt="Project 3" />
           <h5>nome do projeto 3</h5>
-          <p>
-            Description
-          </p>
+          <p>Description</p>
           <a target="_blank">Learn More</a>
         </div>
       </div>
@@ -89,23 +81,27 @@
         <a
           href="https://linkedin.com/in/luiz-felipe-rodrigues-de-freitas"
           target="_blank"
-          ><img src="./assets/linkdin.png"
-        /></a>
+          ><img src="./assets/linkdin.png" alt="LinkedIn" />
+        </a>
         <a href="https://wa.me/353851430716" target="_blank"
-          ><img src="./assets/whatsapp.png"</a
-        >
+          ><img src="./assets/whatsapp.png" alt="WhatsApp" />
+        </a>
       </div>
     </footer>
+
+    <script>
+      function scrollToContact() {
+        document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' });
+      }
+
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
   </body>
 </html>
-
-<script>
-  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-    anchor.addEventListener("click", function (e) {
-      e.preventDefault();
-      document.querySelector(this.getAttribute("href")).scrollIntoView({
-        behavior: "smooth",
-      });
-    });
-  });
-</script>
