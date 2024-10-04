@@ -145,7 +145,7 @@ section div button:hover {
 }
 
 .card {
-  background-color: #000000;
+  background-color: #ffffffff;
   height: 365px;
   width: 365px;
   border-radius: 20px;
@@ -158,18 +158,18 @@ section div button:hover {
 }
 
 .card h5 {
-  color: #ffffff;
+  color: #000000;
   font-size: 24px;
 }
 
 .card p {
-  color: #ffffff;
+  color: #000000;
   margin-top: 20px;
   margin-bottom: 30px;
 }
 
 .card a {
-  background-color: #8ec73d;
+  background-color: #4341dd;
   color: #ffffff;
   padding: 10px 20px;
   border-radius: 25px;
@@ -381,7 +381,7 @@ footer p {
   }
   
   .card {
-    background-color: #000000;
+    background-color: #ffffffff;
     height: auto;
     width: 30%;
     border-radius: 20px;
@@ -395,12 +395,12 @@ footer p {
   }
   
   .card h5 {
-    color: #ffffff;
+    color: #000000;
     font-size: 12px;
   }
   
   .card p {
-    color: #ffffff;
+    color: #000000;
     margin-top: 20px;
     margin-bottom: 30px;
   }
@@ -409,7 +409,7 @@ footer p {
     font-size: 9px;
     width: 10px;
     height: 10px;
-    background-color: #8ec73d;
+    background-color: #4341dd;
     color: #ffffff;
     padding: 10px 20px;
     border-radius: 25px;
