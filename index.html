@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Felipe Rodrigues</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div id="home" class="main-box">
+      <nav>
+        <h2 class="portfolio">Portfo<span>lio</span></h2>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div id="home" class="myName">
+        <h1>
+          Luiz Felipe
+          <br />
+          <span>Rodrigues</span> de <span>Freitas</span>
+        </h1>
+        <h3>Front-End Developer</h3>
+      </div>
+    </div>
+    <section id="about">
+      <img src="./assets/me.png" />
+      <div>
+        <h2>About Me</h2>
+        <p>
+          As a dedicated Front-End Developer with over 2 years of experience, I
+          specialize in creating seamless and engaging user experiences. My
+          expertise lies in leveraging modern web technologies such as HTML,
+          CSS, and JavaScript framework (React) to build responsive and
+          intuitive interfaces. In the Back-end I have knowledge with Node
+          development using JavaScript, with SQL, noSQL banks and tools such as
+          Sequelize, TypeORM, Express, Docker, MongoDB.
+        </p>
+        <button>Contact</button>
+      </div>
+    </section>
+    <div id="projects" class="projects">
+      <h2>Main Projects</h2>
+
+      <div class="cards-project">
+        <div class="card">
+          <img src="./assets/carousel.png" alt="image" />
+          <h5>nome do projeto 1</h5>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
+            explicabo fuga, illum nulla veniam illo accusantium, quisquam
+            sapiente corporis libero esse? Ab asperiores aliquam enim culpa
+            omnis incidunt quia doloremque.
+          </p>
+          <a target="_blank">Learn More</a>
+        </div>
+        <div class="card">
+          <img src="" alt="image" />
+          <h5>nome do projeto 2</h5>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
+            explicabo fuga, illum nulla veniam illo accusantium, quisquam
+            sapiente corporis libero esse? Ab asperiores aliquam enim culpa
+            omnis incidunt quia doloremque.
+          </p>
+          <a target="_blank">Learn More</a>
+        </div>
+        <div class="card">
+          <img src="" alt="image" />
+          <h5>nome do projeto 3</h5>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
+            explicabo fuga, illum nulla veniam illo accusantium, quisquam
+            sapiente corporis libero esse? Ab asperiores aliquam enim culpa
+            omnis incidunt quia doloremque.
+          </p>
+          <a target="_blank">Learn More</a>
+        </div>
+      </div>
+    </div>
+    <footer id="contact">
+      <h5>Felipe Rodrigues</h5>
+      <p>More Informations</p>
+
+      <div class="social">
+        <a
+          href="https://linkedin.com/in/luiz-felipe-rodrigues-de-freitas"
+          target="_blank"
+          ><img src="./assets/linkdin.png"
+        /></a>
+        <a href="https://wa.me/353851430716" target="_blank"
+          ><img src="./assets/whatsapp.png"</a
+        >
+      </div>
+    </footer>
+  </body>
+</html>
+
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute("href")).scrollIntoView({
+        behavior: "smooth",
+      });
+    });
+  });
+</script>
