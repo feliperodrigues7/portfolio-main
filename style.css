@@ -407,11 +407,11 @@ footer p {
   
   .card a {
     font-size: 7px;
-    width: 7px;
-    height: 7px;
+    width: 6px;
+    height: 6px;
     background-color: #4341dd;
     color: #ffffff;
-    padding: 10px 20px;
+    padding: 2px 2px;
     border-radius: 25px;
     cursor: pointer;
     text-decoration: none;
