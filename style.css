@@ -125,10 +125,10 @@ section div button:hover {
 }
 
 .projects {
-  height: 100vh;
+  height: 100%;
   background-color: #191919;
   padding-top: 50px;
-  padding-bottom: 100px;
+  padding-bottom: 200px;
 }
 
 .projects h2 {
@@ -146,7 +146,7 @@ section div button:hover {
 
 .card {
   background-color: #ffffffff;
-  height: 365px;
+  height: 100%;
   width: 365px;
   border-radius: 20px;
   padding: 20px 35px;
@@ -178,14 +178,16 @@ section div button:hover {
 }
 
 .card a:hover {
+  color: #4341dd;
   background-color: transparent;
-  border: 2px solid #f89420;
+  border: 2px solid #4341dd;
   transition: 0.5s;
 }
 
 footer {
+  height: 100px;
   background: #000000;
-  padding-top: 100px;
+  padding-top: 200px;
   padding-bottom: 120px;
   display: flex;
   flex-direction: column;
