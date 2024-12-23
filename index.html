@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FR Developer</title>
-    <link rel="icon" href="./assets/favicon-32x32.png" type="image/png">
+    <link rel="icon" href="./assets/favicon-32x32.png" type="image/png" />
     <link rel="stylesheet" href="./style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -36,17 +36,17 @@
     </div>
     <section id="about">
       <!--<img src="./assets/me.png" alt="Luiz Felipe" /> -->
-      <div>
+      <div class="container-about">
         <h2>About Me</h2>
         <p>
           I'm a passionate Front-End Developer with experience in HTML, CSS,
           JavaScript, and React. I love creating dynamic, user-friendly websites
           and applications. My goal is to continually improve and expand my
-          skillset. My expertise lies in leveraging modern web technologies
-          such as HTML, CSS, and JavaScript framework (React) to build
-          responsive and intuitive interfaces. In the Back-end I have knowledge
-          with Node development using JavaScript, with SQL, noSQL banks and
-          tools such as Sequelize, TypeORM, Express, Docker, MongoDB.
+          skillset. My expertise lies in leveraging modern web technologies such
+          as HTML, CSS, and JavaScript framework (React) to build responsive and
+          intuitive interfaces. In the Back-end I have knowledge with Node
+          development using JavaScript, with SQL, noSQL banks and tools such as
+          Sequelize, TypeORM, Express, Docker, MongoDB.
         </p>
         <button onclick="scrollToContact()">Contact</button>
       </div>
@@ -59,15 +59,18 @@
           <img src="./assets/carousel.png" alt="Project 1" />
           <h5>FPsellection</h5>
           <p>
-            FPsellection is a digital project I created, aimed at showcasing a
-            selection of luxury cars, including iconic models like the Porsche
-            911, Ferrari and Lamborghini. The website offers an interactive and
-            immersive experience, highlighting the features and technical
-            specifications of the vehicles. Using modern technologies like HTML,
-            CSS, and JavaScript, I developed a dynamic image carousel, smooth
-            animations, and a responsive layout, ensuring a fluid and visually
-            striking navigation. The project serves as a true digital showcase
-            for enthusiasts of high-performance cars and sophisticated design.
+            <span id="more"
+              >FPsellection is a digital project I created, aimed at showcasing
+              a selection of luxury cars, including iconic models like the
+              Porsche 911, Ferrari and Lamborghini.The website offers an
+              interactive and immersive experience, highlighting the features
+              and technical specifications of the vehicles. Using modern
+              technologies like HTML, CSS, and JavaScript, I developed a dynamic
+              image carousel, smooth animations, and a responsive layout,
+              ensuring a fluid and visually striking navigation. The project
+              serves as a true digital showcase for enthusiasts of
+              high-performance cars and sophisticated design.</span
+            >
           </p>
           <a
             href="https://feliperodrigues7.github.io/FPsellection/"
@@ -77,15 +80,17 @@
         </div>
         <div class="card">
           <img src="./assets/forecast.png" alt="Project 2" />
-          <h5>Weather Forecast</h5>
+          <h5 class="weather-forecast-title">Weather Forecast</h5>
           <p>
-            This React project displays the weather forecast for the next 5
-            days, using the OpenWeatherMap API. The app shows information such
-            as minimum and maximum temperatures, weather conditions, and
-            illustrative icons for each day. The interface is fully responsive,
-            ensuring an optimised user experience across mobile, tablet, and
-            desktop devices. The deployment is done using GitHub Pages,
-            providing easy access and viewing on any device.
+            <span id="more"
+              >This React project displays the weather forecast for the next 5
+              days, using the OpenWeatherMap API. The app shows information such
+              as minimum and maximum temperatures, weather conditions, and
+              illustrative icons for each day. The interface is fully
+              responsive, ensuring an optimised user experience across mobile,
+              tablet, and desktop devices. The deployment is done using GitHub
+              Pages, providing easy access and viewing on any device.</span
+            >
           </p>
           <a
             href="https://feliperodrigues7.github.io/weather-forecast/"
@@ -94,10 +99,23 @@
           >
         </div>
         <div class="card">
-          <img src="./assets/project3.png" alt="Project 3" />
-          <h5>nome do projeto 3</h5>
-          <p>Description</p>
-          <a href="" target="_blank">Learn More</a>
+          <img src="./assets/favicon.png" alt="Coffee Shop" />
+          <h5>Coffee Shop</h5>
+          <p>
+            <span id="more">
+              developed a frontend project inspired by Cafena, a fictional
+              coffee shop. Using modern technologies such as HTML, CSS, and
+              JavaScript, I created a responsive and visually appealing design,
+              highlighting the brand's visual identity and providing an
+              intuitive browsing experience. This project showcases skills in
+              interface design and attention to detail in web development.</span
+            >
+          </p>
+          <a
+            href="https://feliperodrigues7.github.io/coffee-shop/"
+            target="_blank"
+            >Learn More</a
+          >
         </div>
       </div>
     </div>
@@ -114,6 +132,15 @@
         <a href="https://wa.me/353851430716" target="_blank"
           ><img src="./assets/whatsapp.png" alt="WhatsApp" />
         </a>
+      </div>
+    </div>
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <p>
+          For a better experience, we suggest that you check the projects on a
+          desktop.
+        </p>
+        <button id="closePopup">Close</button>
       </div>
     </div>
 
@@ -136,6 +163,30 @@
           });
         });
       });
+
+      // Function to check the screen width
+      function checkScreenWidth() {
+        if (window.innerWidth <= 430) {
+          // Display the popup if the screen width is 430px or less
+          document.getElementById("popup").style.display = "flex";
+        } else {
+          // Hide the popup if the screen width is greater than 430px
+          document.getElementById("popup").style.display = "none";
+        }
+      }
+
+      // Close the popup when the "Close" button is clicked
+      document
+        .getElementById("closePopup")
+        .addEventListener("click", function () {
+          document.getElementById("popup").style.display = "none";
+        });
+
+      // Check the screen width when the page is loaded
+      window.onload = checkScreenWidth;
+
+      // Check the screen width whenever the window is resized
+      window.onresize = checkScreenWidth;
     </script>
   </body>
 </html>
